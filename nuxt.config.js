@@ -17,13 +17,15 @@ export default {
 
   buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/tailwindcss'],
 
-  modules: ['@nuxtjs/axios', '@nuxtjs/auth', '@nuxtjs/pwa'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/pwa', '@nuxtjs/auth-next'],
 
   auth: {
     strategies: {
-      github: {
-        client_id: '6619c7d24825b744eac5',
-        client_secret: 'cde9661782e4c693546bdf49956e15deef5b98e7',
+      google: {
+        clientId:
+          '226508594082-eomccj5ob00802toe687vsossl47e1mt.apps.googleusercontent.com',
+        scope: ['profile', 'email'],
+        codeChallengeMethod: '',
       },
     },
   },
