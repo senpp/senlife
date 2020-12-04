@@ -15,9 +15,41 @@ export default {
 
   components: false,
 
-  buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/tailwindcss'],
+  buildModules: [
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/google-fonts',
+  ],
 
   modules: ['@nuxtjs/axios', '@nuxtjs/pwa', '@nuxtjs/auth-next'],
+
+  googleFonts: {
+    families: {
+      Inter: true,
+    },
+    display: 'swap',
+  },
+
+  tailwindcss: {
+    config: {
+      theme: {
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+          serif: ['Merriweather', 'serif'],
+        },
+      },
+
+      variants: {
+        extend: {
+          ringColor: ['hover'],
+          ringOffsetColor: ['hover'],
+          ringOffsetWidth: ['hover'],
+          ringOpacity: ['hover'],
+          ringWidth: ['hover'],
+        },
+      },
+    },
+  },
 
   auth: {
     strategies: {
