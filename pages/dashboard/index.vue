@@ -1,6 +1,6 @@
 <template>
   <div class="bg-gray-100 min-h-screen">
-    <div class="p-8 container mx-auto">
+    <div class="p-4 container mx-auto">
       <form action="#" method="POST">
         <div class="shadow sm:rounded-md sm:overflow-hidden">
           <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
@@ -41,7 +41,7 @@
                       />
                     </label>
                   </div>
-                  <p class="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
+                  <p class="text-xs text-gray-500">JSON up to 10MB</p>
                   <p
                     class="relative text-sm cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500"
                     @click.prevent.stop="download(sampleData)"
@@ -60,7 +60,7 @@
               <div>
                 <dl>
                   <div
-                    class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6"
+                    class="px-4 py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6"
                   >
                     <dt class="text-sm font-medium text-gray-500">Salary</dt>
                     <dd
@@ -75,7 +75,7 @@
               <div>
                 <dl>
                   <div
-                    class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6"
+                    class="px-4 py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6"
                   >
                     <dt class="text-sm font-medium text-gray-500">Method</dt>
                     <dd class="mt-1 text-sm font-medium sm:mt-0 sm:col-span-3">
@@ -112,7 +112,7 @@
     </div>
 
     <template v-if="estimateData">
-      <div class="container mx-auto p-8 flex flex-col">
+      <div class="container mx-auto p-4 flex flex-col">
         <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div
             class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8"

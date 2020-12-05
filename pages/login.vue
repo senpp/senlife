@@ -2,7 +2,7 @@
   <div class="container">
     <div class="fixed z-10 inset-0 overflow-y-auto">
       <div
-        class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
+        class="flex items-start justify-center min-h-screen pt-4 px-4 pb-20 text-center md:items-end sm:block sm:p-0"
       >
         <div class="fixed inset-0 transition-opacity" aria-hidden="true">
           <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
@@ -14,7 +14,7 @@
           >&#8203;</span
         >
         <div
-          class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+          class="inline-block align-bottom bg-white rounded-lg text-left w-full overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg"
           role="dialog"
           aria-modal="true"
           aria-labelledby="modal-headline"

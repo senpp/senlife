@@ -2,7 +2,7 @@
   <div class="container">
     <div class="fixed z-10 inset-0 overflow-y-auto">
       <div
-        class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
+        class="flex items-start justify-center min-h-screen pt-4 px-4 pb-20 text-center md:items-end sm:block sm:p-0"
       >
         <div class="fixed inset-0 transition-opacity" aria-hidden="true">
           <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
@@ -14,7 +14,7 @@
           >&#8203;</span
         >
         <div
-          class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+          class="inline-block align-bottom bg-white rounded-lg text-left w-full overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg"
           role="dialog"
           aria-modal="true"
           aria-labelledby="modal-headline"
@@ -35,8 +35,29 @@
                 </h3>
                 <div class="mt-2">
                   <p class="text-sm text-gray-500">
-                    Log in to continue to SenLife.
+                    {{
+                      !$auth.loggedIn
+                        ? 'Log in to continue to SenLife.'
+                        : 'Go to dashboard to start using the app.'
+                    }}
                   </p>
+
+                  <div v-if="$auth.loggedIn" class="w-full block md:hidden">
+                    <div class="text-center my-4">
+                      <img
+                        :src="$auth.user.picture"
+                        :alt="`${$auth.user.name} - Avatar's`"
+                        class="w-16 rounded-full inline-block ring-2 ring-indigo-600 ring-offset-2 cursor-pointer transform hover:scale-105 transition duration-200"
+                      />
+
+                      <p class="text-base font-semibold text-gray-600 mt-2">
+                        {{ $auth.user.name }}
+                        <span class="block text-sm text-gray-400 font-normal">
+                          {{ $auth.user.email }}
+                        </span>
+                      </p>
+                    </div>
+                  </div>
 
                   <nuxt-link
                     v-if="$auth.loggedIn"
@@ -47,11 +68,11 @@
                   </nuxt-link>
                 </div>
               </div>
-              <div v-if="$auth.loggedIn" class="ml-auto">
+              <div v-if="$auth.loggedIn" class="ml-auto hidden md:block">
                 <img
                   :src="$auth.user.picture"
-                  :alt="`$auth.user.name - Avatar's`"
-                  class="w-16 rounded-full ring-2 ring-indigo-300 ring-offset-2 cursor-pointer transform hover:scale-105 transition duration-200"
+                  :alt="`${$auth.user.name} - Avatar's`"
+                  class="w-16 rounded-full ring-2 ring-indigo-600 ring-offset-2 cursor-pointer transform hover:scale-105 transition duration-200"
                 />
               </div>
             </div>
