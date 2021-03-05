@@ -13,7 +13,7 @@
   "dependencies": {
     "@nuxtjs/auth-next": "^5.0.0-1602966760.822bc05",
     "@nuxtjs/axios": "^5.12.3",
-    "@nuxtjs/pwa": "^3.0.2",
+    "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/tailwindcss": "^3.3.1",
     "core-js": "^3.6.5",
     "nanoid": "^2.1.11",
